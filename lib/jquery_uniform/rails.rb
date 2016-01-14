@@ -1,7 +1,11 @@
-require "jquery_uniform/rails/version"
+require 'jquery_uniform/rails/version'
 
 module JqueryUniform
   module Rails
-    # Your code goes here...
+    class Engine < ::Rails::Engine
+      initializer 'jquery_uniform-rails.assets.precompile' do |app|
+        app.config.assets.precompile += ['jquery.uniform/*']
+      end
+    end
   end
 end

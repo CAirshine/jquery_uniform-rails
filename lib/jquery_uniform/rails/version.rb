@@ -1,5 +1,5 @@
 module JqueryUniform
   module Rails
-    VERSION = "0.0.1"
+    VERSION = '2.1.2'
   end
 end
